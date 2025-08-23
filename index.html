@@ -460,53 +460,7 @@ function setDefaultDate() {
         };
 
         window.addEventListener('focus', setDefaultDate);
-<!-- 时间显示脚本（12小时制） -->
-    
-        function startTime() {
-            const today = new Date();
-            const hours = today.getHours();
-            const minutes = today.getMinutes();
-            const seconds = today.getSeconds();
-            
-            // 定义时间段
-            let period;
-            
-            // 根据24小时制的hours确定时间段
-            if (hours >= 0 && hours <= 5) {
-                period = '凌晨';
-            } else if (hours >= 6 && hours <= 11) {
-                period = '上午';
-            } else if (hours === 12) {
-                period = '中午';
-            } else if (hours >= 13 && hours <= 18) {
-                period = '下午';
-            } else {
-                period = '晚上';
-            }
-            
-            // 转换为12小时制并处理特殊情况
-            let displayHours = hours % 12;
-            if (displayHours === 0) {
-                displayHours = 12;
-            }
-            
-            // 添加前导零
-            const displayMinutes = minutes < 10 ? '0' + minutes : minutes;
-            const displaySeconds = seconds < 10 ? '0' + seconds : seconds;
-            
-            // 更新时间显示
-            document.getElementById('time-display').innerHTML = 
-                `${period} ${displayHours}:${displayMinutes}:${displaySeconds}`;
-            
-            // 每500毫秒更新一次
-            setTimeout(startTime, 500);
-        }
-        
-        // 页面加载后初始化
-        window.onload = function() {
-            startTime();
-        };
-    
+
     </script>
 </body>
 </html>
