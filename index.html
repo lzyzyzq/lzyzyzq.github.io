@@ -1,1 +1,53 @@
-重要文件
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工时记录</title>
+    <!-- 引入样式部分 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="time-display" style="text-align: right; margin: 10px 0;"></div>
+    <h1>工时记录</h1>
+    <div class="add-form">
+        <div class="input-group">
+            <input type="date" id="date-input" required
+                   title="请点击选择工作日期"
+                   onfocus="this.showPicker()">
+            
+            <input type="text" id="content-input" 
+                   placeholder="请输入工作内容（可不写）"
+                   title="请详细填写工作内容">
+            
+            <input type="number" id="hours-input" min="0" step="0.5"
+                   placeholder="请输入工时"
+                   title="按天计算（1天=8小时）" required>
+            
+            <input type="number" id="wage-input" min="0" step="100"
+                   placeholder="请输入工资（元）"
+                   title="请输入当日约定工资" required>
+        </div>
+        <button onclick="addWorkLog()">添加记录</button>
+    </div>
+    <table id="worklog">
+        <thead>
+            <tr>
+                <<th>日期</</th>
+                <<th>工作内容</</th>
+                <<th>工时</</th>
+                <<th>工资</</th>
+                <<th>操作</</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="monthly-hours" id="monthly-hours">月统计加载中...</div>
+    <div class="total-hours" id="total-hours">总统计加载中...</div>
+    <button id="scroll-button" onclick="toggleScroll()">↓</button>
+
+    <!-- 引入脚本部分 -->
+    <script src="time-script.js"></script>
+    <script src="main-script.js"></script>
+</body>
+</html>
