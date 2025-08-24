@@ -1,0 +1,180 @@
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    margin: 20px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.1;
+    background-color: #f4f7fa;
+}
+h1 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+th, td {
+    border: 1px solid #FAFAFA;
+    padding: 15px;
+    text-align: center; 
+}
+th {
+    background-color: #3498db;
+    color: white;
+}
+.add-form {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.input-group {
+    flex: 1;
+    margin-right: 10px;
+}
+input[type="date"], input[type="text"], input[type="number"] {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4D5C92;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+input:focus {
+    border-color: #3498DB;
+    outline: none;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #4D5C92;
+    color: white;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #425280;
+}
+.total-hours, .monthly-hours {
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    background: #eafaf1;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+#scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    line-height: 20px;
+    font-size: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-button {
+    background: none;
+    border: none;
+    color: #4D5C92;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 14px;
+    display: inline;
+}
+.content-button:hover {
+    color: #2980b9;
+}
+.delete-button {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 14px;
+}
+.delete-button:hover {
+    color: #c0392b;
+}
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.25);
+    z-index: 1000;
+    width: 80vw;
+    max-width: 800px;
+    height: auto;
+    min-height: 45vh;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+.modal-content > div {
+    flex: 1;
+    padding: 20px;
+    margin: 15px 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-y: auto;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+.modal-content h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+.modal-content span[onclick] {
+    background: #3498db;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-end;
+    margin-top: 15px;
+}
+.modal-content span[onclick]:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+@media (max-width: 600px) {
+    .add-form {
+        flex-direction: column;
+    }
+    .input-group {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    button {
+        width: 100%;
+    }
+}
